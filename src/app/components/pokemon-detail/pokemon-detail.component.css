@@ -1,0 +1,23 @@
+.pokemon-detail {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pokemon-detail img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .pokemon-detail h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .pokemon-detail p {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  

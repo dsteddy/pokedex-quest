@@ -1,0 +1,35 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="newPokemon">
+
+    <h3>Add Pokémon To The Pokédex</h3>
+
+    <fieldset>
+        <label for="pokemon-name">Name :</label>
+        <input id="pokemon-name" name="pokemon-name" formControlName="name">
+    </fieldset>
+
+    <div *ngIf="newPokemon.controls['name']?.invalid && (newPokemon.controls['name']?.dirty || newPokemon.controls['name']?.touched) || fail === true">
+        <p>Name is required.</p>
+    </div>
+
+    <fieldset>
+        <label for="pokemon-img">Image :</label>
+        <input id="pokemon-img" name="pokemon-img" formControlName="img">
+    </fieldset>
+
+    <div *ngIf="newPokemon.controls['img']?.invalid && (newPokemon.controls['img']?.dirty || newPokemon.controls['img']?.touched) || fail === true">
+        <p>Image is required.</p>
+    </div>
+
+    <fieldset>
+        <label for="pokemon-desc">Description :</label>
+        <input id="pokemon-desc" name="pokemon-desc" formControlName="desc">
+    </fieldset>
+
+    <div *ngIf="newPokemon.controls['desc']?.invalid && (newPokemon.controls['desc']?.dirty || newPokemon.controls['desc']?.touched) || fail === true">
+        <p>Description is required.</p>
+    </div>
+
+    <button type="reset">Reset</button>
+    <button type="submit">Add Pokémon</button>
+
+</form>

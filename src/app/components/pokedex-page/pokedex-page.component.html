@@ -1,0 +1,12 @@
+<div class="pokedex-container">
+    <h3>Pokémon List</h3>
+    <div class="pokemon-list">
+        <div *ngFor="let poke of pokemonList; let i = index">
+            <app-pokemon-list [pokemon]="poke" (sendChosenMon)="onReceiveChosenPokemon($event)"></app-pokemon-list>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="chosenPokemon.name">
+    <app-pokemon-detail [pokemon]="chosenPokemon"></app-pokemon-detail>
+</div>
